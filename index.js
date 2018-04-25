@@ -36,8 +36,9 @@ scene.add(spotLight);
 
 // renderer
 var renderer = new THREE.WebGLRenderer({
-    antialias: true
+    // antialias: true
 });
+
 renderer.setClearColor(0xEEEEEE);
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.shadowMap.enabled = true;
