@@ -1,8 +1,8 @@
-const textureLoader = (url)=> new Promise((resolve, reject)=>{
-    new THREE.TextureLoader().load(url, texture=>{
-        resolve(texture);
-    });
-});
+// var textureLoader = (url)=> new Promise((resolve, reject)=>{
+//     new THREE.TextureLoader().load(url, texture=>{
+//         resolve(texture);
+//     });
+// });
 
 function initStats() {
     var stats = new Stats();
@@ -36,7 +36,7 @@ var spotLight = new THREE.SpotLight(0xffffff, 1);
 spotLight.castShadow = true;
 scene.add(spotLight);
 
-const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
+var ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
 scene.add(ambientLight);
 
 
@@ -73,7 +73,7 @@ var path = '../assets/fonts/Alex Brush_Regular.json';
 loader.load(path, function(font) {
 
 
-    // const textMaterial = new THREE.MeshPhongMaterial({
+    // var textMaterial = new THREE.MeshPhongMaterial({
     //     ambient: 0xffffff,
     //     color: 0xefefef,
     //     specular: 0xefefef
@@ -113,7 +113,7 @@ loader.load(path, function(font) {
         scene.add(text);
 
 
-        const controls = new function() {
+        var controls = new function() {
             this.cameraX = 10;
             this.cameraY = 60;
             this.cameraZ = 400;
